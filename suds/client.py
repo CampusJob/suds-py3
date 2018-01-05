@@ -637,6 +637,7 @@ class SoapClient:
         retxml = self.options.retxml
         prettyxml = self.options.prettyxml
         log.debug('sending to (%s)\nmessage:\n%s', location, soapenv)
+        from IPython import embed; embed()
         try:
             self.last_sent(soapenv)
             plugins = PluginContainer(self.options.plugins)
